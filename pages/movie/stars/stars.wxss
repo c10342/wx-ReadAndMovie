@@ -1,0 +1,25 @@
+.stars-container{
+    display: flex;
+    flex-direction: row;
+    height: 24rpx;
+}
+
+.stars{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 24rpx;
+}
+
+.stars image{
+    height: 24rpx;
+    width: 24rpx;
+    margin-right: 5rpx;
+}
+
+.stars-core{
+    line-height: 24rpx;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+}

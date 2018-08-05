@@ -1,0 +1,5 @@
+<import src='../movie-grid/movie-grid.wxml' />
+
+<view class='movie-more-container'>
+<template is='movieGridTemplate' data='{{movies}}' />
+</view>

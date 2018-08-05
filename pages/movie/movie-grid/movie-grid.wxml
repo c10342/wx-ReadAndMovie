@@ -1,0 +1,15 @@
+<import src='../movie-item/movie-item.wxml' />
+
+<template name='movieGridTemplate'>
+    <!-- 使用竖向滚动时，需要给<scroll-view/>一个固定高度，通过 WXSS 设置 height。弹性布局对scroll-view无效 -->
+    <!-- 若要使用下拉刷新，请使用页面的滚动，而不是 scroll-view ，这样也能通过点击顶部状态栏回到页面顶部 -->
+    <!-- <scroll-view class='movie-grid-container' scroll-x='false' scroll-y='true' bindscrolltolower='onScrollToLower'> -->
+    <view class='movie-grid-container'>
+        <block wx:for='{{movies}}' wx:for-item='movie' wx:key='{{index}}'>
+            <view class='template1-container'>
+                <template is='movieItemTemplate' data='{{movie}}' />
+            </view>
+        </block>
+    </view>
+    <!-- </scroll-view> -->
+</template>

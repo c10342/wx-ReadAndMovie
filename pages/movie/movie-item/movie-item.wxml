@@ -1,0 +1,8 @@
+<import src='../stars/stars.wxml' />
+ <template name='movieItemTemplate'>
+    <view class='movie-item-container' catchtap='goToMovieDetail' data-movieId='{{movie.movieId}}'>
+        <image src='{{movie.coverageUrl}}' class='img'></image>
+        <text class='title'>{{movie.title}}</text>
+        <template is='starsTemplate' data='{{movie}}' />
+    </view>
+</template> 

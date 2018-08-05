@@ -1,0 +1,19 @@
+<!-- 模板文件 -->
+<template name='postItem'>
+<view class='post-container'>
+        <view class='post-author-date'>
+            <image wx:if='{{true}}' class='post-author' src='{{avatar}}'></image>
+            <text class='post-date'>{{date}}</text>
+        </view>
+        <text class='post-title'>{{title}}</text>
+        <image class='post-image' src='{{imgSrc}}'></image>
+        <text class='post-content'>{{content}}</text>
+        <view class='post-like'>
+        <!-- template模板文件最好使用绝对路径，因为template模板文件可能会在多处用到，用相对路径可能会出问题 -->
+            <image class='post-like-image' src='/images/icon/chat1.png'></image>
+            <text class='post-like-number'>{{reading}}</text>
+            <image class='post-like-image' src='/images/icon/view.png'></image>
+            <text class='post-like-number'>{{collection}}</text>
+        </view>
+    </view>
+</template>

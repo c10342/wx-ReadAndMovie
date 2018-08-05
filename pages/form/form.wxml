@@ -1,0 +1,11 @@
+<!--pages/form/form.wxml-->
+<view>
+    <button>按钮</button>
+    <switch></switch>
+    <checkbox></checkbox>
+    <radio-group>
+    <radio>男</radio>
+    <radio>女</radio>
+    </radio-group>
+    <slider show-value='{{true}}'></slider>
+</view>

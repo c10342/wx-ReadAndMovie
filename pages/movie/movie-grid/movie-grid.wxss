@@ -1,0 +1,15 @@
+@import '../movie-item/movie-item.wxss';
+
+.movie-grid-container {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap; */
+    margin: 35rpx;
+}
+
+.template1-container {
+    float: left;
+    margin-bottom: 50rpx;
+    margin-right: 3.5%;
+}

@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-avatar{
+    width: 200rpx;
+    height: 200rpx;
+    margin-top: 160rpx;
+    border-radius: 100rpx;
+}
+
+.user-name{
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-top: 100rpx;
+}
+
+.moto-container{
+    margin-top: 200rpx;
+    width: 200rpx;
+    height: 80rpx;
+    border: 1px solid #405F80;
+    border-radius: 10rpx;
+    text-align: center;
+}
+.moto{
+    font-size: 22rpx;
+    font-weight: bold;
+    line-height: 80rpx;
+}
+
+/* page是默认包裹在页面的外层元素 */
+page{
+    background-color: #B3D4DB;
+    height: 100%;
+}
+

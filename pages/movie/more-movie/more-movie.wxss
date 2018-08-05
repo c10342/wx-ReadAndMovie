@@ -1,0 +1,5 @@
+@import '../movie-grid/movie-grid.wxss';
+
+.movie-more-container{
+    height: 100%;
+}

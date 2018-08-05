@@ -1,0 +1,30 @@
+<!-- 导入模板文件，绝对路径，相对路径都可以 -->
+<import src='post-item/post-item.wxml' />
+
+<view class='container'>
+    <!-- 给swiper组件设置宽和高只能设置在swiper上，swipe-item自动设置为100% -->
+    <swiper indicator-dots='true' indicator-color='#ccc' indicator-active-color='#fff' autoplay='true' interval='2000' circular='true' catchtap='onSwiperTap'>
+        <!-- <swiper-item>
+             绝对路径，从根目录开始 
+            <image src='/images/post/xiaolong.jpg'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='/images/post/vr.png'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='/images/post/bl.png'></image>
+        </swiper-item> -->
+        
+        <swiper-item wx:for='{{postList}}' wx:key="{{index}}">
+            <image src='{{item.imgSrc}}' data-postId='{{item.postId}}'></image>
+        </swiper-item>
+
+    </swiper>
+    <!-- wx:for='{{post_data}}'要循环的数据；wx:for-item='item'循环每一项的名称，可不写，默认是item；wx:for-index='index'索引，可不写，默认是index；wx:key="{{index}}"唯一标识符 -->
+    <block wx:for='{{postList}}' wx:key="{{index}}" wx:for-item='item' wx:for-index='index'>
+        <view catchtap='goToDetail' data-postId='{{item.postId}}'>
+            <!-- is='postItem'对应导入的模板文件的名称，即name属性，data='{{item}}'是用来传递数据给模板文件的 -->
+            <template is='postItem' data='{{...item}}' />
+        </view>
+    </block>
+</view>

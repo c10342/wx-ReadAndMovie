@@ -1,0 +1,8 @@
+<view class='container'>
+    <image class='user-avatar' src='{{userAvatarUrl}}'></image>
+    <text class='user-name'>Hello,{{username}}</text>
+    <!-- 微信的tap事件相当于web端的click事件，所有的微信事件前都要加bind或者catch，bind会进行冒泡，catch不会进行冒泡，一般bind用的多 -->
+    <view class='moto-container' bindtap='onTap'>
+        <text class='moto'>开启小程序之旅</text>
+    </view>
+</view>

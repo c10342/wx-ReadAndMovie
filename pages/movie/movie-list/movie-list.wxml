@@ -1,0 +1,21 @@
+<import src='../movie-item/movie-item.wxml' />
+
+<template name='movieListTemplate'>
+    <view class='movie-list-container'>
+        <view class='header'>
+            <text class='zzry'>{{movies[0].category}}</text>
+            <view class='more' catchtap='onMoreTap' data-category='{{movies[0].category}}'>
+                <text class='more-text'>更多</text>
+                <image class='more-icon' src='/images/icon/arrow-right.png'></image>
+            </view>
+        </view>
+        <view class='movie-item-list'>
+            <!-- <template is='movieItemTemplate' />
+            <template is='movieItemTemplate' />
+            <template is='movieItemTemplate' /> -->
+            <block wx:for='{{movies}}' wx:for-item="movie" wx:key='{{index}}'>
+                <template is='movieItemTemplate' data='{{movie}}' />
+            </block>
+        </view>
+    </view>
+</template>
